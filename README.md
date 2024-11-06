@@ -24,6 +24,7 @@ In the root folder of the project, create a .env file. The content for this file
 If you want to load predefined data into the database, run the following command:
 
 npm run dataCities
+npm run dataItineraries
 
 5. Use the existing database
 If you don’t want to load new data and prefer to use the existing database, just ensure that the .env file is properly configured.

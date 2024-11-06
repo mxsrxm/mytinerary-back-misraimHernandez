@@ -8,8 +8,6 @@ import indexRouter from "./router/index.js";
 import not_found_handler from "./middlewares/not_found_handler.js";
 import error_handler from "./middlewares/error_handler.js";
 import bad_request_handler from "./middlewares/bad_request_handler.js";
-import handleUnauthorized from "./middlewares/handleUnauthorized.js";
-import handleForbidden from "./middlewares/handleForbidden.js";
 import handleRequestTimeout from "./middlewares/handleRequestTimeout.js";
 import handleTooManyRequests from "./middlewares/handleTooManyRequests.js";
 
@@ -25,8 +23,6 @@ server.use(morgan('dev'))
 server.use('/api', indexRouter)
 
 server.use(bad_request_handler)
-server.use(handleUnauthorized);
-server.use(handleForbidden);
 server.use(not_found_handler)
 server.use(handleRequestTimeout);
 server.use(handleTooManyRequests);
